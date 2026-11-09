@@ -47,7 +47,7 @@ const products = [
 ];
 
 
-const WHATSAPP_NUMBER = "3203816322";
+const WHATSAPP_NUMBER = "573203816322";
 
 const categories = ["Todos", ...new Set(products.map(p => p.category))];
 const productGrid = document.getElementById("productGrid");
