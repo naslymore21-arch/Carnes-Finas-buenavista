@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carnes Finas Buenavista: carnes, víveres y productos para el hogar en Buenavista, Boyacá.">
+  <title>Carnes Finas Buenavista | Calidad y tradición</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Carnes Finas Buenavista, inicio">
+      <img class="brand-logo" src="img/logo.png" alt="Logo Carnes Finas Buenavista">
+      <span><strong>CARNES FINAS</strong><small>BUENAVISTA</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#promociones">Promociones</a>
+      <a href="#contacto">Contacto</a>
+      <button class="cart-link" id="openCart">Mi pedido <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">BUENAVISTA · BOYACÁ</p>
+        <h1>Todo lo que necesitas, <em>en un solo lugar.</em></h1>
+        <p>Carnes, víveres y productos para tu hogar, con la atención cercana de siempre.</p>
+        <a class="button button-light" href="#productos">Explorar productos</a>
+      </div>
+      <div class="hero-note"><span>CALIDAD</span><b>•</b><span>VARIEDAD</span><b>•</b><span>TRADICIÓN</span></div>
+    </section>
+
+    <section class="intro section" id="nosotros">
+      <p class="eyebrow">BIENVENIDOS</p>
+      <h2>El mercado de tu hogar comienza aquí.</h2>
+      <p>En Carnes Finas Buenavista reunimos productos cárnicos y artículos de mercado para acompañar tus comidas y tu día a día.</p>
+    </section>
+
+    <section class="section products-section" id="productos">
+      <div class="section-heading">
+        <div><p class="eyebrow">NUESTRO CATÁLOGO</p><h2>Encuentra tus productos</h2></div>
+        <p>Explora las categorías y agrega lo que necesitas a tu pedido.</p>
+      </div>
+      <div class="catalog-tools">
+        <label class="search-box"><span class="sr-only">Buscar productos</span><input id="searchInput" type="search" placeholder="Buscar un producto..."></label>
+        <div class="category-filters" id="categoryFilters" aria-label="Filtrar por categoría"></div>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+
+    </section>
+
+    <section class="promo section" id="promociones">
+      <div><p class="eyebrow">PARA TU HOGAR</p><h2>Arma tu mercado<br>en un solo pedido.</h2><p>Consulta las promociones disponibles directamente con nosotros.</p></div>
+      <a class="button button-light" href="#contacto">Consultar promociones</a>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <p class="eyebrow">ESTAMOS PARA ATENDERTE</p>
+      <h2>¿Qué necesitas hoy?</h2>
+      <p>Estamos en Buenavista, Boyacá. Escríbenos para consultar disponibilidad, precios y realizar tu pedido.</p>
+      <a class="button" id="contactWhatsApp" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <p class="contact-location">Buenavista, Boyacá, Colombia</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="#inicio"><img class="brand-logo" src="img/logo.png" alt="Logo Carnes Finas Buenavista"><span><strong>CARNES FINAS</strong><small>BUENAVISTA</small></span></a>
+    <p>Calidad, variedad y tradición para tu hogar.</p>
+    <small>© <span id="year"></span> Carnes Finas Buenavista. Todos los derechos reservados.</small>
+  </footer>
+
+  <div class="option-modal" id="productOptionModal" aria-hidden="true">
+    <div class="option-backdrop" id="productOptionBackdrop"></div>
+    <section class="option-dialog" role="dialog" aria-modal="true" aria-labelledby="optionProductName">
+      <button class="option-close" id="cancelProductOption" aria-label="Cerrar">×</button>
+      <p class="eyebrow">PERSONALIZA TU PEDIDO</p>
+      <h2 id="optionProductName">Producto</h2>
+      <label id="optionQuestion" for="productOption">Elige una opción:</label>
+      <select id="productOption"></select>
+      <label for="optionQuantity">Cantidad</label>
+      <input id="optionQuantity" type="number" min="1" step="1" value="1">
+      <div class="option-actions">
+        <button class="button button-light" id="cancelProductOptionSecondary" type="button">Cancelar</button>
+        <button class="button" id="confirmProductOption" type="button">Agregar al pedido</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Mi pedido" aria-hidden="true">
+    <div class="cart-header"><h2>Mi pedido</h2><button id="closeCart" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Todavía no has agregado productos.</p></div>
+    <div class="cart-summary"><p><span>Subtotal</span><strong id="cartTotal">Por confirmar</strong></p><small>El establecimiento confirmará precios, disponibilidad y valor final.</small><button class="button whatsapp-button" id="sendOrder">Enviar pedido por WhatsApp</button></div>
+  </aside>
+</body>
+</html>
