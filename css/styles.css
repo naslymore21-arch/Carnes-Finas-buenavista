@@ -51,3 +51,14 @@
 
 /* Selector de presentación y variantes del pedido */
 .option-modal{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:18px}.option-modal.is-open{display:flex}.option-backdrop{position:absolute;inset:0;background:rgba(20,10,8,.68)}.option-dialog{position:relative;z-index:1;width:min(430px,100%);background:var(--white);padding:28px;border-radius:12px;box-shadow:0 20px 60px #0004}.option-dialog h2{color:var(--brown2);margin:0 32px 8px 0;font-size:30px}.option-dialog .eyebrow{margin-bottom:8px}.option-dialog label{display:block;font-size:13px;font-weight:700;margin:16px 0 6px;color:var(--brown2)}.option-dialog select,.option-dialog input{width:100%;padding:12px;border:1px solid var(--line);background:#fff;border-radius:6px;font:inherit;color:var(--ink)}.option-close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:28px;cursor:pointer;color:var(--brown2)}.option-actions{display:flex;gap:10px;margin-top:22px}.option-actions .button{flex:1}.option-actions .button-light{background:#eee5d9}.cart-row small{max-width:220px}
+
+
+/* Información de domicilios y horarios */
+.delivery{background:#f7f3ed}
+.delivery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.delivery-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 22px;box-shadow:0 8px 24px rgba(40,25,18,.06)}
+.delivery-icon{display:inline-flex;width:48px;height:48px;align-items:center;justify-content:center;background:#f1e7dc;border-radius:50%;font-size:24px;margin-bottom:12px}
+.delivery-card h3{color:var(--brown2);margin:0 0 8px;font-size:19px}
+.delivery-card p{color:var(--muted);line-height:1.65;margin:0;font-size:14px}
+.delivery-card strong{color:var(--brown2)}
+@media(max-width:650px){.delivery-grid{grid-template-columns:1fr;gap:12px}.delivery-card{padding:20px}}
